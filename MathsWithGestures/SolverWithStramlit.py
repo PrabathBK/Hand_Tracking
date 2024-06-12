@@ -8,7 +8,6 @@ import streamlit as st
  
  
 st.set_page_config(layout="wide")
-# st.image('MathGestures.png')
  
 col1, col2 = st.columns([4,3])
 with col1:
@@ -24,7 +23,6 @@ genai.configure(api_key="AIzaSyAAL8wvdcYFisZ3fC0_AMmJqMekO-1j2Nc")
 model = genai.GenerativeModel('gemini-1.5-flash')
  
 # Initialize the webcam to capture video
-# The '2' indicates the third camera connected to your computer; '0' would usually refer to the built-in camera
 cap = cv2.VideoCapture(0)
 cap.set(3,900)
 cap.set(4,600)
@@ -34,16 +32,13 @@ detector = HandDetector(staticMode=False, maxHands=1, modelComplexity=1, detecti
  
  
 def getHandInfo(img):
-    # Find hands in the current frame
-    # The 'draw' parameter draws landmarks and hand outlines on the image if set to True
-    # The 'flipType' parameter flips the image, making it easier for some detections
     hands, img = detector.findHands(img, draw=True, flipType=False)
  
     # Check if any hands are detected
     if hands:
         # Information for the first hand detected
-        hand = hands[0]  # Get the first hand detected
-        lmList = hand["lmList"]  # List of 21 landmarks for the first hand
+        hand = hands[0]  
+        lmList = hand["lmList"]  
         # Count the number of fingers up for the first hand
         fingers = detector.fingersUp(hand)
         # print(fingers)
@@ -76,8 +71,6 @@ image_combined = None
 output_text= ""
 # Continuously get frames from the webcam
 while True:
-    # Capture each frame from the webcam
-    # 'success' will be True if the frame is successfully captured, 'img' will contain the frame
     success, img = cap.read()
     if not success:
         # st.warning("Failed to capture image from webcam")
