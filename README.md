@@ -12,7 +12,7 @@ This project is a hand drawing math solver built using OpenCV and the Gemini API
 - Receiving and displaying the solution
 
 ### Demo:
-[![Hand Drawing Math Solver](http://img.youtube.com/vi/YOUR_VIDEO_ID1/0.jpg)](https://youtu.be/OCJ6JqEigGU)
+[![Hand Drawing Math Solver](https://github.com/PrabathBK/Hand_Tracking/blob/main/handmath.png?raw=true)](https://youtu.be/OCJ6JqEigGU)
 
 ## Project 2: Hand Gesture Volume Controller
 
@@ -24,5 +24,5 @@ This project is a hand gesture volume controller system developed using OpenCV a
 - Real-time volume control using Pycaw
 
 ### Demo:
-[![Hand Gesture Volume Controller](http://img.youtube.com/vi/YOUR_VIDEO_ID2/0.jpg)](https://youtu.be/tAk_KTXQla4)
+[![Hand Gesture Volume Controller](https://github.com/PrabathBK/Hand_Tracking/blob/main/handVolume.png?raw=true)](https://youtu.be/tAk_KTXQla4)
 
