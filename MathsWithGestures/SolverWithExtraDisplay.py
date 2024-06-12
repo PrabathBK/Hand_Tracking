@@ -40,7 +40,7 @@ def draw(info, prev_pos, canvas):
 def sendToAI(model, canvas, fingers):
     if fingers == [1, 1, 1, 1, 0]:
         pil_image = Image.fromarray(canvas)
-        response = model.generate_content(["Solve this math problem", pil_image])
+        response = model.generate_content(["Solve this math problem with small explain if needed", pil_image])
         return response.text
     return None
 

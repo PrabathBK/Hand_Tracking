@@ -6,6 +6,7 @@ import google.generativeai as genai
 from PIL import Image
 # import streamlit as st
 
+# st.set_page_config(layout="wide")
 cap = cv2.VideoCapture(0)
 cap.set(3,1280)
 cap.set(4,720)
@@ -29,7 +30,7 @@ def getHandInfo(img):
         lmList = hand["lmList"]  # List of 21 landmarks for the first hand
         # Count the number of fingers up for the first hand
         fingers = detector.fingersUp(hand)
-        # print(fingers)
+        print(fingers)
         return fingers, lmList
     else:
         return None
@@ -47,7 +48,7 @@ def draw(info,prev_pos,canvas):
     return current_pos, canvas
 
 def sendToAI(model,canvas,fingers):
-    if fingers == [0,1,1,1,0]:
+    if fingers == [1,1,0,0,1]:
         # response = model.generate_content("Hi.How are you?")
         # print(response.text)
         pil_image = Image.fromarray(canvas)
