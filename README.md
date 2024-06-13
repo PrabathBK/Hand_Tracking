@@ -11,6 +11,8 @@ This project is a hand drawing math solver built using OpenCV and the Gemini API
 - Sending the problems to Gemini API
 - Receiving and displaying the solution
 
+*If you are using the given code, please replace the Gemini API with your own API.*
+
 ### Demo:
 [![Hand Drawing Math Solver](https://github.com/PrabathBK/Hand_Tracking/blob/main/handmath.png?raw=true)](https://youtu.be/OCJ6JqEigGU)
 
